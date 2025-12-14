@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎄 Natal da Família Veloso 2024</title>
+    <title>🎄 Natal da Família Veloso 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -359,6 +359,18 @@
             box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
         }
 
+        .casa-endereco {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 215, 0, 0.15);
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            font-weight: 600;
+            color: var(--gold);
+        }
+
         /* Programação */
         .programacao-section {
             background: linear-gradient(180deg, #0d1b2a 0%, var(--dark) 100%);
@@ -399,7 +411,7 @@
             background: linear-gradient(145deg, #2a4a6d 0%, #1a3a5c 100%);
             padding: 25px;
             border-radius: 20px;
-            max-width: 350px;
+            max-width: 400px;
             margin: 0 30px;
             position: relative;
             border: 2px solid rgba(255,215,0,0.2);
@@ -434,13 +446,46 @@
         .timeline-title {
             font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .timeline-desc {
             opacity: 0.8;
             font-size: 0.95rem;
             line-height: 1.6;
+        }
+
+        .timeline-detail {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .timeline-detail p {
+            margin-bottom: 5px;
+        }
+
+        .timeline-detail strong {
+            color: var(--gold);
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content.dia-especial {
+            background: linear-gradient(145deg, #3a5a7d 0%, #2a4a6d 100%);
+            border: 2px solid var(--gold);
+        }
+
+        .premio-destaque {
+            background: linear-gradient(135deg, var(--gold) 0%, #ffaa00 100%);
+            color: var(--dark) !important;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 1rem;
+            animation: pulse 2s infinite;
         }
 
         /* Jogos Section */
@@ -750,7 +795,7 @@
     <!-- Hero -->
     <section class="hero" id="inicio">
         <div class="hero-content">
-            <span class="hero-badge">✨ Reunião Especial 2024</span>
+            <span class="hero-badge">✨ 27 Pessoas Reunidas • Casa de Praia</span>
             <h1>Natal da Família<br><span>Veloso</span> 🎅</h1>
             <p class="hero-subtitle">Um encontro inesquecível na Praia do Araçagi, São Luís do Maranhão. Vamos celebrar juntos!</p>
             
@@ -767,7 +812,7 @@
 
             <div class="hero-date">
                 <span class="icon">📅</span>
-                <span>24 - 26 de Dezembro de 2024</span>
+                <span>23 - 26 de Dezembro de 2025</span>
             </div>
         </div>
     </section>
@@ -786,7 +831,7 @@
                     <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1011058939498954380/original/5f3c8f12-d1f3-44d9-90b7-04cdffdaa767.jpeg" alt="Casa 1" class="casa-image" onerror="this.src='https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'">
                     <div class="casa-content">
                         <span class="casa-badge">🏡 Casa 1</span>
-                        <h3 class="casa-title">Belíssima Casa na Praia</h3>
+                        <h3 class="casa-title">Casa na Praia do Araçagi</h3>
                         <div class="casa-features">
                             <span class="casa-feature">🏖️ 400m da praia</span>
                             <span class="casa-feature">🛏️ Quartos</span>
@@ -797,9 +842,10 @@
                             Casa confortável e bem localizada, perfeita para momentos em família. 
                             Próxima à praia com toda estrutura necessária.
                         </p>
-                        <a href="https://darg.stays.com.br/pt/apartment/id02h/belissima-casa-a-400m-da-praia-do-aracagy" target="_blank" class="casa-btn">
-                            🔗 Ver Detalhes <span>→</span>
-                        </a>
+                        <div class="casa-endereco">
+                            <span>📍</span>
+                            <span>Praia do Araçagi, São Luís - MA</span>
+                        </div>
                     </div>
                 </div>
 
@@ -820,9 +866,10 @@
                             com conforto. Piscina privativa, área de churrasqueira, amplas varandas 
                             e jardim espaçoso. Ideal para grandes grupos!
                         </p>
-                        <a href="https://wa.me/p/9317668611584583/559888522015" target="_blank" class="casa-btn">
-                            📱 Ver no WhatsApp <span>→</span>
-                        </a>
+                        <div class="casa-endereco">
+                            <span>📍</span>
+                            <span>Praia do Araçagi, São Luís - MA</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -833,40 +880,82 @@
     <section class="programacao-section" id="programacao">
         <div class="section">
             <div class="section-header">
-                <h2>📋 Programação</h2>
-                <p>O que vamos fazer juntos durante esses dias especiais</p>
+                <h2>📋 Programação Oficial</h2>
+                <p>Tudo que vamos fazer juntos durante esses dias especiais</p>
             </div>
 
             <div class="timeline">
+                <!-- Dia 23 -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">📅 24 de Dezembro</div>
-                        <h4 class="timeline-title">🚗 Chegada & Boas-Vindas</h4>
-                        <p class="timeline-desc">Recepção de todos, acomodação nas casas. À noite: Ceia de Natal tradicional em família!</p>
+                        <div class="timeline-date">📅 23/12 – Terça-feira</div>
+                        <h4 class="timeline-title">🚗 Chegada & Churrasco</h4>
+                        <div class="timeline-detail">
+                            <p><strong>Tarde:</strong></p>
+                            <p>• Chegada da família</p>
+                            <p>• Organização da casa</p>
+                            <p><strong>Noite – 18h:</strong></p>
+                            <p>🍖 Churrasco + 🎤 Karaokê</p>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Dia 24 -->
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">📅 25 de Dezembro</div>
-                        <h4 class="timeline-title">🎁 Dia de Natal</h4>
-                        <p class="timeline-desc">Manhã: Troca de presentes e café especial. Tarde: Praia e piscina. Noite: Jogos em família!</p>
+                    <div class="timeline-content dia-especial">
+                        <div class="timeline-date">📅 24/12 – Quarta-feira</div>
+                        <h4 class="timeline-title">🎄 Véspera de Natal</h4>
+                        <div class="timeline-detail">
+                            <p><strong>Manhã – 7h às 10h:</strong></p>
+                            <p>☕ Café da manhã</p>
+                            <p><strong>Tarde – 11h às 16h:</strong></p>
+                            <p>🏖️ Almoço na praia</p>
+                            <p><strong>Noite – 20h:</strong></p>
+                            <p>🙏 Oração</p>
+                            <p>🎁 Amigo Secreto</p>
+                            <p>💌 Cápsula do Tempo</p>
+                            <p>🍽️ Ceia de Natal</p>
+                            <p>🎱 Bingo</p>
+                            <p>✨ Cerimônia de Natal</p>
+                            <p>🥂 Brinde da Meia-Noite</p>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Dia 25 -->
                 <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">📅 26 de Dezembro</div>
-                        <h4 class="timeline-title">🏖️ Dia de Diversão</h4>
-                        <p class="timeline-desc">Dia inteiro de praia, churrasqueira, mais jogos e muita diversão antes da despedida.</p>
+                    <div class="timeline-content dia-especial">
+                        <div class="timeline-date">📅 25/12 – Quinta-feira</div>
+                        <h4 class="timeline-title">🎅 Dia de Natal</h4>
+                        <div class="timeline-detail">
+                            <p><strong>Manhã – 6h30 às 7h30:</strong></p>
+                            <p>☕ Café da manhã (sair até 7h30)</p>
+                            <p><strong>8h30 às 13h:</strong></p>
+                            <p>🚤 Passeio de Barco</p>
+                            <p>🍽️ Almoço no barco</p>
+                            <p><strong>Tarde – 15h às 19h:</strong></p>
+                            <p>🏊 Piscina + 🎮 Jogos + 🏃 Gincana</p>
+                            <p><strong>Noite – 18h:</strong></p>
+                            <p>🎤 Karaokê + 🎮 Jogos</p>
+                            <p>🍕 Pizza</p>
+                            <p class="premio-destaque">🎱 BINGO ESPECIAL<br>🏆 Prêmio Cartela Cheia: R$ 1.000</p>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Dia 26 -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">🎮 Durante Todos os Dias</div>
-                        <h4 class="timeline-title">🕹️ Jogos da Família Veloso</h4>
-                        <p class="timeline-desc">Quiz, Karaokê, Bingo, Jogo da Memória e muito mais! Confira abaixo.</p>
+                        <div class="timeline-date">📅 26/12 – Sexta-feira</div>
+                        <h4 class="timeline-title">👋 Despedida</h4>
+                        <div class="timeline-detail">
+                            <p><strong>Manhã – 7h30 às 11h:</strong></p>
+                            <p>☕ Café da manhã</p>
+                            <p><strong>12h:</strong></p>
+                            <p>👋 Despedida da casa</p>
+                            <p>📸 Fotos finais</p>
+                            <p>🚗 Volta para casa</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -954,7 +1043,7 @@
         <div class="footer-icons">🎄🎁🌟🎅🦌❄️</div>
         <h3>Família Veloso</h3>
         <p>Unidos pelo amor, celebrando juntos! ❤️</p>
-        <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem;">© 2024 Natal da Família Veloso</p>
+        <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem;">© 2025 Natal da Família Veloso</p>
     </footer>
 
     <!-- Lightbox -->
