@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎄 Natal da Família Veloso 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --red: #c41e3a;
+            --dark-red: #8b0000;
+            --green: #165b33;
+            --light-green: #1e7b46;
+            --gold: #ffd700;
+            --cream: #fef7e5;
+            --white: #ffffff;
+            --dark: #1a1a2e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Flocos de neve */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            animation: fall linear infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
+        }
+
+        /* Navegação */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            padding: 15px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--dark-red) 0%, var(--red) 50%, var(--green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50' font-size='50' opacity='0.03'%3E🎄%3C/text%3E%3C/svg%3E");
+            background-size: 100px 100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-date .icon {
+            font-size: 2rem;
+        }
+
+        /* Luzes decorativas */
+        .lights-decoration {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .light-bulb {
+            width: 12px;
+            height: 20px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .light-bulb:nth-child(1) { background: #ff6b6b; animation-delay: 0s; }
+        .light-bulb:nth-child(2) { background: #4ecdc4; animation-delay: 0.2s; }
+        .light-bulb:nth-child(3) { background: #ffe66d; animation-delay: 0.4s; }
+        .light-bulb:nth-child(4) { background: #a855f7; animation-delay: 0.6s; }
+        .light-bulb:nth-child(5) { background: #22c55e; animation-delay: 0.8s; }
+        .light-bulb:nth-child(6) { background: #ff6b6b; animation-delay: 1s; }
+        .light-bulb:nth-child(7) { background: #4ecdc4; animation-delay: 1.2s; }
+        .light-bulb:nth-child(8) { background: #ffe66d; animation-delay: 1.4s; }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px currentColor; opacity: 0.6; }
+            100% { box-shadow: 0 0 15px currentColor, 0 0 25px currentColor; opacity: 1; }
+        }
+
+        /* Seções */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Casas Section */
+        .casas-section {
+            background: linear-gradient(180deg, var(--dark) 0%, #0d1b2a 100%);
+        }
+
+        .casas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .casa-card {
+            background: linear-gradient(145deg, #1e3a5f 0%, #0d2137 100%);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .casa-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.15);
+        }
+
+        .casa-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .casa-content {
+            padding: 30px;
+        }
+
+        .casa-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .casa-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .casa-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .casa-feature {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .casa-description {
+            opacity: 0.85;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .casa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--red) 0%, var(--dark-red) 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .casa-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
+        }
+
+        /* Programação */
+        .programacao-section {
+            background: linear-gradient(180deg, #0d1b2a 0%, var(--dark) 100%);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold), var(--red), var(--green));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-content {
+            background: linear-gradient(145deg, #2a4a6d 0%, #1a3a5c 100%);
+            padding: 25px;
+            border-radius: 20px;
+            max-width: 350px;
+            margin: 0 30px;
+            position: relative;
+            border: 2px solid rgba(255,215,0,0.2);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--gold);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -40px;
+        }
+
+        .timeline-date {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .timeline-desc {
+            opacity: 0.8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Jogos Section */
+        .jogos-section {
+            background: linear-gradient(135deg, var(--green) 0%, #0d3320 100%);
+        }
+
+        .jogos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .jogo-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .jogo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .jogo-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--red) 0%, var(--dark-red) 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 20px rgba(196, 30, 58, 0.3);
+        }
+
+        .jogo-card:nth-child(2) .jogo-icon {
+            background: linear-gradient(135deg, var(--green) 0%, var(--light-green) 100%);
+            box-shadow: 0 8px 20px rgba(22, 91, 51, 0.3);
+        }
+
+        .jogo-card:nth-child(3) .jogo-icon {
+            background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+            box-shadow: 0 8px 20px rgba(147, 51, 234, 0.3);
+        }
+
+        .jogo-card:nth-child(4) .jogo-icon {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .jogo-card:nth-child(5) .jogo-icon {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+        }
+
+        .jogo-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .jogo-desc {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .jogo-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--red) 0%, var(--dark-red) 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.3s;
+        }
+
+        .jogo-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Galeria */
+        .galeria-section {
+            background: var(--dark);
+            padding: 80px 20px;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .galeria-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .galeria-item:hover {
+            transform: scale(1.03);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-red) 0%, var(--red) 100%);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .footer-icons {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .footer h3 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .lightbox-close:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Responsivo */
+        @media (max-width: 900px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(26, 26, 46, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .casas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-content::before,
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -40px;
+                right: auto;
+            }
+
+            .timeline-content {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero-date {
+                padding: 15px 25px;
+                font-size: 1rem;
+            }
+
+            .casa-image {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Flocos de neve -->
+    <div class="snowflakes" id="snowflakes"></div>
+
+    <!-- Navegação -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🎄 Família Veloso</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#casas">Hospedagem</a></li>
+                <li><a href="#programacao">Programação</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="hero-badge">✨ Reunião Especial 2024</span>
+            <h1>Natal da Família<br><span>Veloso</span> 🎅</h1>
+            <p class="hero-subtitle">Um encontro inesquecível na Praia do Araçagi, São Luís do Maranhão. Vamos celebrar juntos!</p>
+            
+            <div class="lights-decoration">
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+                <div class="light-bulb"></div>
+            </div>
+
+            <div class="hero-date">
+                <span class="icon">📅</span>
+                <span>24 - 26 de Dezembro de 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casas -->
+    <section class="casas-section" id="casas">
+        <div class="section">
+            <div class="section-header">
+                <h2>🏠 Onde Vamos Ficar</h2>
+                <p>Duas casas incríveis a 400 metros da Praia do Araçagi para toda a família</p>
+            </div>
+
+            <div class="casas-grid">
+                <!-- Casa 1 -->
+                <div class="casa-card">
+                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1011058939498954380/original/5f3c8f12-d1f3-44d9-90b7-04cdffdaa767.jpeg" alt="Casa 1" class="casa-image" onerror="this.src='https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'">
+                    <div class="casa-content">
+                        <span class="casa-badge">🏡 Casa 1</span>
+                        <h3 class="casa-title">Belíssima Casa na Praia</h3>
+                        <div class="casa-features">
+                            <span class="casa-feature">🏖️ 400m da praia</span>
+                            <span class="casa-feature">🛏️ Quartos</span>
+                            <span class="casa-feature">🏊 Piscina</span>
+                            <span class="casa-feature">📶 Wi-Fi</span>
+                        </div>
+                        <p class="casa-description">
+                            Casa confortável e bem localizada, perfeita para momentos em família. 
+                            Próxima à praia com toda estrutura necessária.
+                        </p>
+                        <a href="https://darg.stays.com.br/pt/apartment/id02h/belissima-casa-a-400m-da-praia-do-aracagy" target="_blank" class="casa-btn">
+                            🔗 Ver Detalhes <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Casa 2 -->
+                <div class="casa-card">
+                    <img src="fotos/1765723488655_image.png" alt="Casa 2" class="casa-image">
+                    <div class="casa-content">
+                        <span class="casa-badge">🏡 Casa 2</span>
+                        <h3 class="casa-title">Casa Rústica com Piscina</h3>
+                        <div class="casa-features">
+                            <span class="casa-feature">🛏️ 6 Quartos</span>
+                            <span class="casa-feature">🏠 2 Andares</span>
+                            <span class="casa-feature">🏊 Piscina</span>
+                            <span class="casa-feature">🍖 Churrasqueira</span>
+                        </div>
+                        <p class="casa-description">
+                            Casa encantadora com parte superior em madeira, combinando charme rústico 
+                            com conforto. Piscina privativa, área de churrasqueira, amplas varandas 
+                            e jardim espaçoso. Ideal para grandes grupos!
+                        </p>
+                        <a href="https://wa.me/p/9317668611584583/559888522015" target="_blank" class="casa-btn">
+                            📱 Ver no WhatsApp <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programação -->
+    <section class="programacao-section" id="programacao">
+        <div class="section">
+            <div class="section-header">
+                <h2>📋 Programação</h2>
+                <p>O que vamos fazer juntos durante esses dias especiais</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">📅 24 de Dezembro</div>
+                        <h4 class="timeline-title">🚗 Chegada & Boas-Vindas</h4>
+                        <p class="timeline-desc">Recepção de todos, acomodação nas casas. À noite: Ceia de Natal tradicional em família!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">📅 25 de Dezembro</div>
+                        <h4 class="timeline-title">🎁 Dia de Natal</h4>
+                        <p class="timeline-desc">Manhã: Troca de presentes e café especial. Tarde: Praia e piscina. Noite: Jogos em família!</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">📅 26 de Dezembro</div>
+                        <h4 class="timeline-title">🏖️ Dia de Diversão</h4>
+                        <p class="timeline-desc">Dia inteiro de praia, churrasqueira, mais jogos e muita diversão antes da despedida.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">🎮 Durante Todos os Dias</div>
+                        <h4 class="timeline-title">🕹️ Jogos da Família Veloso</h4>
+                        <p class="timeline-desc">Quiz, Karaokê, Bingo, Jogo da Memória e muito mais! Confira abaixo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jogos -->
+    <section class="jogos-section" id="jogos">
+        <div class="section">
+            <div class="section-header">
+                <h2>🎮 Jogos da Família</h2>
+                <p>Diversão garantida para todas as idades!</p>
+            </div>
+
+            <div class="jogos-grid">
+                <!-- Quiz -->
+                <div class="jogo-card" onclick="window.open('https://bavkiq-hugby8-cittet.github.io/quizdosveloso/', '_blank')">
+                    <div class="jogo-icon">🎯</div>
+                    <h3 class="jogo-title">Quiz dos Veloso</h3>
+                    <p class="jogo-desc">Teste seus conhecimentos sobre a família! Quem conhece mais?</p>
+                    <a href="https://bavkiq-hugby8-cittet.github.io/quizdosveloso/" target="_blank" class="jogo-btn" onclick="event.stopPropagation()">
+                        🎮 Jogar
+                    </a>
+                </div>
+
+                <!-- Cápsula do Tempo -->
+                <div class="jogo-card" onclick="window.open('https://bavkiq-hugby8-cittet.github.io/capsuladotempo2/', '_blank')">
+                    <div class="jogo-icon">💌</div>
+                    <h3 class="jogo-title">Cápsula do Tempo</h3>
+                    <p class="jogo-desc">Escreva mensagens secretas para abrir no próximo Natal!</p>
+                    <a href="https://bavkiq-hugby8-cittet.github.io/capsuladotempo2/" target="_blank" class="jogo-btn" onclick="event.stopPropagation()">
+                        ✉️ Criar Mensagem
+                    </a>
+                </div>
+
+                <!-- Bingo -->
+                <div class="jogo-card" onclick="window.open('https://bavkiq-hugby8-cittet.github.io/bingo2/', '_blank')">
+                    <div class="jogo-icon">🎱</div>
+                    <h3 class="jogo-title">Bingo da Família</h3>
+                    <p class="jogo-desc">O clássico bingo em versão digital. Valendo prêmios!</p>
+                    <a href="https://bavkiq-hugby8-cittet.github.io/bingo2/" target="_blank" class="jogo-btn" onclick="event.stopPropagation()">
+                        🎯 Jogar Bingo
+                    </a>
+                </div>
+
+                <!-- Karaokê -->
+                <div class="jogo-card" onclick="window.open('https://bavkiq-hugby8-cittet.github.io/karaoke/', '_blank')">
+                    <div class="jogo-icon">🎤</div>
+                    <h3 class="jogo-title">Karaokê dos Veloso</h3>
+                    <p class="jogo-desc">Solte a voz e mostre seu talento musical!</p>
+                    <a href="https://bavkiq-hugby8-cittet.github.io/karaoke/" target="_blank" class="jogo-btn" onclick="event.stopPropagation()">
+                        🎤 Cantar
+                    </a>
+                </div>
+
+                <!-- Jogo da Memória -->
+                <div class="jogo-card" onclick="window.open('https://bavkiq-hugby8-cittet.github.io/jogodamemoria/', '_blank')">
+                    <div class="jogo-icon">🧠</div>
+                    <h3 class="jogo-title">Jogo da Memória</h3>
+                    <p class="jogo-desc">Encontre os pares com fotos da família!</p>
+                    <a href="https://bavkiq-hugby8-cittet.github.io/jogodamemoria/" target="_blank" class="jogo-btn" onclick="event.stopPropagation()">
+                        🧠 Jogar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="galeria-section" id="galeria">
+        <div class="section">
+            <div class="section-header">
+                <h2>📸 Nossa Família</h2>
+                <p>Momentos especiais que guardaremos para sempre</p>
+            </div>
+
+            <div class="galeria-grid" id="galeriaGrid">
+                <!-- As fotos serão inseridas aqui via JavaScript ou manualmente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-icons">🎄🎁🌟🎅🦌❄️</div>
+        <h3>Família Veloso</h3>
+        <p>Unidos pelo amor, celebrando juntos! ❤️</p>
+        <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem;">© 2024 Natal da Família Veloso</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">×</span>
+        <img src="" alt="Foto ampliada" id="lightboxImg">
+    </div>
+
+    <script>
+        // Criar flocos de neve
+        function createSnowflakes() {
+            const container = document.getElementById('snowflakes');
+            const symbols = ['❄', '❅', '❆', '✻', '✼'];
+            
+            for (let i = 0; i < 40; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'snowflake';
+                flake.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+                flake.style.left = Math.random() * 100 + '%';
+                flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                flake.style.animationDelay = Math.random() * 10 + 's';
+                flake.style.fontSize = (Math.random() * 1.2 + 0.6) + 'rem';
+                flake.style.opacity = Math.random() * 0.5 + 0.3;
+                container.appendChild(flake);
+            }
+        }
+
+        // Menu mobile
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Galeria de fotos - URLs das fotos da família
+        const fotos = [
+            { src: 'fotos/IMG_4803.png', alt: 'Família Veloso - AMOR' },
+            { src: 'fotos/IMG_4873.jpeg', alt: 'Celebração em família' },
+            { src: 'fotos/IMG_4874.jpeg', alt: 'Natal com a vovó' },
+            { src: 'fotos/IMG_4862.png', alt: 'Festa de família' },
+            { src: 'fotos/IMG_4856.png', alt: 'Casal' },
+            { src: 'fotos/IMG_4847.png', alt: 'Grupo de mulheres' },
+            { src: 'fotos/IMG_4840.jpeg', alt: 'Família reunida' },
+            { src: 'fotos/IMG_4826.png', alt: 'Família' },
+            { src: 'fotos/IMG_4812.png', alt: 'Casal elegante' },
+            { src: 'fotos/IMG_4805.png', alt: 'Brinde entre amigos' },
+            { src: 'fotos/b542c796-a610-4356-825c-a5c6f44657ef.jpeg', alt: 'Crianças' },
+            { src: 'fotos/48338b20-a5e5-4244-90dc-928258f545f9.jpeg', alt: 'Festa de aniversário' },
+            { src: 'fotos/21f366a5-09c4-4e49-b91a-1df993ffad42.jpeg', alt: 'Rapazes com bebê' },
+            { src: 'fotos/d04dfabf-9179-4166-bc7e-8e26d652898b.jpeg', alt: 'Família na sala' },
+            { src: 'fotos/42430fbc-8026-426f-ba02-752329abef11.jpeg', alt: 'Halloween' },
+        ];
+
+        function loadGaleria() {
+            const grid = document.getElementById('galeriaGrid');
+            fotos.forEach(foto => {
+                const item = document.createElement('div');
+                item.className = 'galeria-item';
+                item.innerHTML = `
+                    <img src="${foto.src}" alt="${foto.alt}" loading="lazy">
+                    <div class="galeria-overlay">
+                        <span>📷 Clique para ampliar</span>
+                    </div>
+                `;
+                item.onclick = () => openLightbox(foto.src);
+                grid.appendChild(item);
+            });
+        }
+
+        // Lightbox
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target.id === 'lightbox') closeLightbox();
+        });
+
+        // Inicializar
+        createSnowflakes();
+        loadGaleria();
+    </script>
+</body>
+</html>
