@@ -266,109 +266,99 @@
             margin: 0 auto;
         }
 
-        /* Casas Section */
+        /* Casas Section - Simplificado */
         .casas-section {
             background: linear-gradient(180deg, var(--dark) 0%, #0d1b2a 100%);
         }
 
-        .casas-grid {
+        .casas-grid-simples {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .casa-card {
+        .casa-card-simples {
             background: linear-gradient(145deg, #1e3a5f 0%, #0d2137 100%);
-            border-radius: 25px;
-            overflow: hidden;
-            border: 2px solid rgba(255, 215, 0, 0.2);
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-
-        .casa-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.15);
-        }
-
-        .casa-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .casa-content {
-            padding: 30px;
-        }
-
-        .casa-badge {
-            display: inline-block;
-            background: var(--gold);
-            color: var(--dark);
-            padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .casa-title {
-            font-family: 'Fredoka', sans-serif;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--white);
-        }
-
-        .casa-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .casa-feature {
-            background: rgba(255,255,255,0.1);
-            padding: 8px 15px;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .casa-description {
-            opacity: 0.85;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-
-        .casa-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--red) 0%, var(--dark-red) 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: 700;
+            padding: 30px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .casa-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
+        .casa-card-simples:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
         }
 
-        .casa-endereco {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 215, 0, 0.15);
-            padding: 15px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            font-weight: 600;
+        .casa-numero {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.8rem;
             color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .casa-endereco-simples {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .endereco-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .casa-endereco-simples span:last-child {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .casa-botoes {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-maps, .btn-waze {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-maps {
+            background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
+            color: white;
+        }
+
+        .btn-maps:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.4);
+        }
+
+        .btn-waze {
+            background: linear-gradient(135deg, #33ccff 0%, #00b8e6 100%);
+            color: white;
+        }
+
+        .btn-waze:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(51, 204, 255, 0.4);
         }
 
         /* Programação */
@@ -722,7 +712,7 @@
                 font-size: 1.1rem;
             }
 
-            .casas-grid {
+            .casas-grid-simples {
                 grid-template-columns: 1fr;
             }
 
@@ -761,10 +751,6 @@
             .hero-date {
                 padding: 15px 25px;
                 font-size: 1rem;
-            }
-
-            .casa-image {
-                height: 200px;
             }
         }
     </style>
@@ -822,54 +808,45 @@
         <div class="section">
             <div class="section-header">
                 <h2>🏠 Onde Vamos Ficar</h2>
-                <p>Duas casas incríveis a 400 metros da Praia do Araçagi para toda a família</p>
+                <p>Duas casas na Praia do Araçagi para toda a família</p>
             </div>
 
-            <div class="casas-grid">
+            <div class="casas-grid-simples">
                 <!-- Casa 1 -->
-                <div class="casa-card">
-                    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1011058939498954380/original/5f3c8f12-d1f3-44d9-90b7-04cdffdaa767.jpeg" alt="Casa 1" class="casa-image" onerror="this.src='https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'">
-                    <div class="casa-content">
-                        <span class="casa-badge">🏡 Casa 1</span>
-                        <h3 class="casa-title">Casa na Praia do Araçagi</h3>
-                        <div class="casa-features">
-                            <span class="casa-feature">🏖️ 400m da praia</span>
-                            <span class="casa-feature">🛏️ Quartos</span>
-                            <span class="casa-feature">🏊 Piscina</span>
-                            <span class="casa-feature">📶 Wi-Fi</span>
-                        </div>
-                        <p class="casa-description">
-                            Casa confortável e bem localizada, perfeita para momentos em família. 
-                            Próxima à praia com toda estrutura necessária.
-                        </p>
-                        <div class="casa-endereco">
-                            <span>📍</span>
-                            <span>Praia do Araçagi, São Luís - MA</span>
-                        </div>
+                <div class="casa-card-simples">
+                    <div class="casa-numero">🏡 Casa 1</div>
+                    <div class="casa-endereco-simples">
+                        <span class="endereco-icon">📍</span>
+                        <span>Rua dos Saveiros, 12, QD 8<br>Araçagy, São José de Ribamar - MA</span>
+                    </div>
+                    <div class="casa-botoes">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+dos+Saveiros+12+QD+8+Araçagy+São+José+de+Ribamar+MA" target="_blank" class="btn-maps">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            Google Maps
+                        </a>
+                        <a href="https://waze.com/ul?q=Rua+dos+Saveiros+12+QD+8+Araçagy+São+José+de+Ribamar+MA" target="_blank" class="btn-waze">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.54 6.63c.69 1.38 1.06 2.9 1.06 4.47 0 2.74-1.1 5.22-2.9 7.02-1.8 1.8-4.28 2.9-7.02 2.9-1.57 0-3.09-.37-4.47-1.06-.39-.2-.83-.26-1.26-.18l-3.55.89.89-3.55c.08-.43.02-.87-.18-1.26-.69-1.38-1.06-2.9-1.06-4.47 0-2.74 1.1-5.22 2.9-7.02C6.75 2.57 9.23 1.47 11.97 1.47c1.57 0 3.09.37 4.47 1.06.39.2.83.26 1.26.18l3.55-.89-.89 3.55c-.08.43-.02.87.18 1.26zM9.5 10.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm5 0c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm-7 4c0 1.66 2.24 3 5 3s5-1.34 5-3h-10z"/></svg>
+                            Waze
+                        </a>
                     </div>
                 </div>
 
                 <!-- Casa 2 -->
-                <div class="casa-card">
-                    <img src="fotos/1765723488655_image.png" alt="Casa 2" class="casa-image">
-                    <div class="casa-content">
-                        <span class="casa-badge">🏡 Casa 2</span>
-                        <h3 class="casa-title">Casa Rústica com Piscina</h3>
-                        <div class="casa-features">
-                            <span class="casa-feature">🛏️ 6 Quartos</span>
-                            <span class="casa-feature">🏠 2 Andares</span>
-                            <span class="casa-feature">🏊 Piscina</span>
-                            <span class="casa-feature">🍖 Churrasqueira</span>
-                        </div>
-                        <p class="casa-description">
-                            Casa encantadora com parte superior em madeira, combinando charme rústico 
-                            com conforto. Piscina privativa, área de churrasqueira, amplas varandas 
-                            e jardim espaçoso. Ideal para grandes grupos!
-                        </p>
-                        <div class="casa-endereco">
-                            <span>📍</span>
-                            <span>Praia do Araçagi, São Luís - MA</span>
-                        </div>
+                <div class="casa-card-simples">
+                    <div class="casa-numero">🏡 Casa 2</div>
+                    <div class="casa-endereco-simples">
+                        <span class="endereco-icon">📍</span>
+                        <span>Rua Caçoeiras, QD 21, Nº 1<br>Praia do Araçagy, São José de Ribamar - MA</span>
+                    </div>
+                    <div class="casa-botoes">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Caçoeiras+QD+21+Num+1+Praia+do+Araçagy+São+José+de+Ribamar+MA" target="_blank" class="btn-maps">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            Google Maps
+                        </a>
+                        <a href="https://waze.com/ul?q=Rua+Caçoeiras+QD+21+Num+1+Praia+do+Araçagy+São+José+de+Ribamar+MA" target="_blank" class="btn-waze">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.54 6.63c.69 1.38 1.06 2.9 1.06 4.47 0 2.74-1.1 5.22-2.9 7.02-1.8 1.8-4.28 2.9-7.02 2.9-1.57 0-3.09-.37-4.47-1.06-.39-.2-.83-.26-1.26-.18l-3.55.89.89-3.55c.08-.43.02-.87-.18-1.26-.69-1.38-1.06-2.9-1.06-4.47 0-2.74 1.1-5.22 2.9-7.02C6.75 2.57 9.23 1.47 11.97 1.47c1.57 0 3.09.37 4.47 1.06.39.2.83.26 1.26.18l3.55-.89-.89 3.55c-.08.43-.02.87.18 1.26zM9.5 10.5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm5 0c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm-7 4c0 1.66 2.24 3 5 3s5-1.34 5-3h-10z"/></svg>
+                            Waze
+                        </a>
                     </div>
                 </div>
             </div>
